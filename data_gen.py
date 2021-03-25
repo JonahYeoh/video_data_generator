@@ -115,7 +115,7 @@ class ActionDataGenerator(object):
                     y_train.append(y)
         
                 # Make sure they're numpy arrays (as opposed to lists)
-                X_train = np.array(X_train, dtype='object')
+                X_train = np.array(X_train, dtype='float32')
                 #X_train = np.rollaxis(X_train,1,4)
                 y_train = np.array(y_train)
                 y_train = utils.to_categorical(y_train, n_classes)
